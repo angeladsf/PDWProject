@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+
+<div class="top-header">
+    <div class="container">
+        <div class="top-header-left">
+            <ul>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <div class="top-header-center">
+        </div>
+        <div class="top-header-right">
+            <ul>
+                <li><a href="/Account/Login">Entrar</a></li>
+                <li class="active"><a href="/Account/Register">Registar</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- /top-header -->
+<!-- main-menu -->
+<div class="main-menu">
+    <div class="container">
+        <div class="head-nav">
+            <span class="menu"> </span>
+            <ul>
+                <li class="active"><a href="Index">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <!-- script-for-nav -->
+        <script>
+            $("span.menu").click(function () {
+                $(".head-nav ul").slideToggle(300, function () {
+                    // Animation complete.
+                });
+            });
+        </script>
+        <!-- script-for-nav -->
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html"><img src="../images/logo.png" title="Sweetcake" /></a>
+        </div>
+        <!-- logo -->
+    </div>
+</div>
+<!-- /main-menu -->
+<!---start-content----->
+<div class="content">
+    <div class="main">
+        <div class="container">
+            <div class="register">
+                <form action="VerifyRegister" method="post">
+                    <div class="register-top-grid">
+                        <h3>INFORMAÇÃO PESSOAL</h3>
+                        <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                            <span>Nome Completo<label>*</label></span>
+                            <input type="text" name="Username" placeholder="O Teu Nome Completo" required="required" maxlength="200" />
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            <span>Morada Completa<label>*</label></span>
+                            <input type="text" name="Address" placeholder="A Tua Morada Completa" required="required" maxlength="200" />
+                        </div>
+                        <div class="clearfix"> </div>
+                        <a class="news-letter" href="#">
+                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Inscrever na Newsletter</label>
+                        </a>
+                    </div>
+                    <div class="register-bottom-grid">
+                        <h3>INFORMAÇÃO DA SESSÃO</h3>
+                        <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                            <input type="password" name="Password" placeholder="Escreve uma Password" required="required" id="myInput" min="8" max=" 16" />
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            <input type="email" name="Email" placeholder="Escreve o teu Email" required="required" max=" 50" />
+                        </div>
+                        <div>
+                            <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+                            <label class="check" for="check3">Mostrar password</label>
+                        </div>
+                        <div class="clearfix">
+                            <a class="forgot" href="/Account/Login">Já tens conta? Entra</a>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="login-right">
+                        <input type="submit" value="Registar">
+                    </div>
+                    <div class="clearfix"> </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col-md-3 location">
+                <h4>Local</h4>
+                <p>Covilhã</p>
+                <h4>Horário</h4>
+                <p>Dias da Semana 8h-18h</p>
+                <p>Fins de Semana 8h-17h</p>
+                <p>Telefonar nos feriados</p>
+            </div>
+            <div class="col-md-3 customer">
+                <h4>Serviço ao Cliente</h4>
+                <p>Caso algum problema, contartar por</p>
+                <h4>Teelefone</h4>
+                <h6>916668905</h6>
+                <h4>Email</h4>
+                <h6>sweet@bakery.com</h6>
+            </div>
+            <div class="col-md-3 social">
+                <h4>Redes Sociais</h4>
+                <div class="face-b">
+                    <img src="../images/foot.png" title="name" />
+                    <a href="http://www.facebook.com"><i class="fb"> </i></a>
+                </div>
+                <div class="twet">
+                    <img src="../images/foot.png" title="name" />
+                    <a href="http://twitter.com"><i class="twt"> </i></a>
+                </div>
+            </div>
+            <div class="col-md-3 sign">
+                <h4>Encomendas pagas na entrega por multibanco ou dinheiro.</h4>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Trabalho realizado por Ângela Ferreira e Beatriz Herculano</p>
+        </div>
+    </div>
+</div>

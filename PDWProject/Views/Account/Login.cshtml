@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<div class="top-header">
+    <div class="container">
+        <div class="top-header-left">
+            <ul>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <div class="top-header-center">
+        </div>
+        <div class="top-header-right">
+            <ul>
+                <li class="active"><a href="/Account/Login">Entrar</a></li>
+                <li><a href="/Account/Register">Registar</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- /top-header -->
+<!-- main-menu -->
+<div class="main-menu">
+    <div class="container">
+        <div class="head-nav">
+            <span class="menu"> </span>
+            <ul>
+                <li class="active"><a href="Index">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+        <!-- script-for-nav -->
+        <script>
+            $("span.menu").click(function () {
+                $(".head-nav ul").slideToggle(300, function () {
+                    // Animation complete.
+                });
+            });
+        </script>
+        <!-- script-for-nav -->
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html"><img src="../images/logo.png" title="Sweetcake" /></a>
+        </div>
+        <!-- logo -->
+    </div>
+</div>
+<!-- /main-menu -->
+<!---start-content----->
+<div class="content">
+    <div class="container">
+        <div class="login-page">
+            <div class="account_grid">
+                <div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+                    <h3>NOVOS CLIENTES</h3>
+                    <p>Ao criar uma conta na nossa loja, poderás escolher, encomendar e personalizar os bolos que tu queres.</p>
+                    <a class="acount-btn" href="/Account/Register">Criar uma conta</a>
+                </div>
+                <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
+                    <h3>CLIENTES REGISTADOS</h3>
+                    <p>Se já tiveres uma conta, entra.</p>
+                    <form action="Verify" method="post">
+                        <div>
+                            <span>Email<label>*</label></span>
+                            <input type="email" name="Email" placeholder="Enter User Email" required="" />
+                        </div>
+                        <div>
+                            <span>Password<label>*</label></span>
+                            <input type="password" name="Password" placeholder="Enter Password" required="" id="myInput" />
+                        </div>
+                        <div>
+                            <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+                            <label class="check" for="check3">Mostar password</label>
+                        </div>
+                        <a class="forgot" href="/Account/Register">Ainda não tens conta? Regista-te</a>
+                        <input type="submit" value="Entrar">
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="col-md-3 location">
+                <h4>Local</h4>
+                <p>Covilhã</p>
+                <h4>Horário</h4>
+                <p>Dias da Semana 8h-18h</p>
+                <p>Fins de Semana 8h-17h</p>
+                <p>Telefonar nos feriados</p>
+            </div>
+            <div class="col-md-3 customer">
+                <h4>Serviço ao Cliente</h4>
+                <p>Caso algum problema, contartar por</p>
+                <h4>Teelefone</h4>
+                <h6>916668905</h6>
+                <h4>Email</h4>
+                <h6>sweet@bakery.com</h6>
+            </div>
+            <div class="col-md-3 social">
+                <h4>Redes Sociais</h4>
+                <div class="face-b">
+                    <img src="../images/foot.png" title="name" />
+                    <a href="http://www.facebook.com"><i class="fb"> </i></a>
+                </div>
+                <div class="twet">
+                    <img src="../images/foot.png" title="name" />
+                    <a href="http://twitter.com"><i class="twt"> </i></a>
+                </div>
+            </div>
+            <div class="col-md-3 sign">
+                <h4>Encomendas pagas na entrega por multibanco ou dinheiro.</h4>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Trabalho realizado por Ângela Ferreira e Beatriz Herculano</p>
+        </div>
+    </div>
+</div>
